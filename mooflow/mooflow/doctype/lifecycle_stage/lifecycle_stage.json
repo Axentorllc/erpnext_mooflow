@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:stage_name",
+ "creation": "2025-07-23 12:00:00.000000",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stage_name",
+  "column_break_1",
+  "is_active",
+  "section_break_2",
+  "min_age_days",
+  "max_age_days",
+  "column_break_3",
+  "min_weight_kg",
+  "target_weight_kg",
+  "section_break_4",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "stage_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stage Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "default": 1,
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Age Range"
+  },
+  {
+   "fieldname": "min_age_days",
+   "fieldtype": "Int",
+   "label": "Minimum Age (Days)"
+  },
+  {
+   "fieldname": "max_age_days",
+   "fieldtype": "Int",
+   "label": "Maximum Age (Days)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "min_weight_kg",
+   "fieldtype": "Float",
+   "label": "Minimum Weight (kg)",
+   "precision": 2
+  },
+  {
+   "fieldname": "target_weight_kg",
+   "fieldtype": "Float",
+   "label": "Target Weight (kg)",
+   "precision": 2
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "has_web_view": 0,
+ "in_create": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-07-23 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MooFlow",
+ "name": "Lifecycle Stage",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

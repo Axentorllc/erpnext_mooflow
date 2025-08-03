@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "creation": "2025-07-23 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cow",
+  "action_date",
+  "action_type",
+  "performed_by",
+  "column_break_1",
+  "status",
+  "outcome",
+  "section_break_followup",
+  "follow_up_required",
+  "follow_up_date",
+  "follow_up_actions_created",
+  "column_break_followup",
+  "success_metrics",
+  "effectiveness_score",
+  "section_break_3",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ACT-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cow",
+   "fieldtype": "Link",
+   "label": "Cow",
+   "options": "Cow Profile",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "action_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Action Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Action Type",
+   "options": "Action Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performed By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "default": "Completed",
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "Successful\nPartially Successful\nFailed\nNot Applicable"
+  },
+  {
+   "fieldname": "section_break_followup",
+   "fieldtype": "Section Break",
+   "label": "Follow-up Management"
+  },
+  {
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date",
+   "depends_on": "follow_up_required"
+  },
+  {
+   "fieldname": "follow_up_actions_created",
+   "fieldtype": "Check",
+   "label": "Follow-ups Created",
+   "read_only": 1,
+   "description": "Follow-up actions were scheduled"
+  },
+  {
+   "fieldname": "column_break_followup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "success_metrics",
+   "fieldtype": "JSON",
+   "label": "Success Metrics",
+   "description": "Success measurement data"
+  },
+  {
+   "fieldname": "effectiveness_score",
+   "fieldtype": "Float",
+   "label": "Effectiveness Score",
+   "read_only": 1,
+   "precision": 1,
+   "description": "Action effectiveness (1-10)"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  }
+ ],
+ "has_web_view": 0,
+ "links": [],
+ "modified": "2025-07-24 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MooFlow",
+ "name": "Cow Action Item",
+ "autoname": "naming_series:",
+ "naming_rule": "By Naming Series",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Farm Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Farm Worker",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:reading_name",
+ "creation": "2025-07-23 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reading_name",
+  "category",
+  "data_type",
+  "column_break_1",
+  "unit_of_measure",
+  "decimal_places",
+  "frequency",
+  "section_break_2",
+  "is_mandatory",
+  "is_active",
+  "column_break_3",
+  "min_value",
+  "max_value",
+  "section_break_4",
+  "normal_range_min",
+  "normal_range_max",
+  "section_break_alert",
+  "enable_alerts",
+  "critical_low_threshold",
+  "critical_high_threshold",
+  "column_break_alert",
+  "alert_message_template",
+  "section_break_automation",
+  "automation_rules",
+  "section_break_stages",
+  "use_stage_specific_ranges",
+  "stage_ranges",
+  "section_break_6",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "reading_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reading Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Production\nHealth\nPhysical\nBehavioral\nReproductive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Data Type",
+   "options": "Numeric\nText\nBoolean\nDate\nSelect",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Data",
+   "label": "Unit of Measure",
+   "depends_on": "eval:doc.data_type=='Numeric'"
+  },
+  {
+   "fieldname": "decimal_places",
+   "fieldtype": "Int",
+   "default": 2,
+   "label": "Decimal Places",
+   "depends_on": "eval:doc.data_type=='Numeric'"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Daily\nWeekly\nMonthly\nAs Needed"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Validation"
+  },
+  {
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Is Mandatory"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "default": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "min_value",
+   "fieldtype": "Float",
+   "label": "Minimum Value",
+   "depends_on": "eval:doc.data_type=='Numeric'",
+   "precision": 6
+  },
+  {
+   "fieldname": "max_value",
+   "fieldtype": "Float",
+   "label": "Maximum Value",
+   "depends_on": "eval:doc.data_type=='Numeric'",
+   "precision": 6
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Normal Range",
+   "depends_on": "eval:doc.data_type=='Numeric'"
+  },
+  {
+   "fieldname": "normal_range_min",
+   "fieldtype": "Float",
+   "label": "Normal Range Minimum",
+   "depends_on": "eval:doc.data_type=='Numeric'",
+   "precision": 6
+  },
+  {
+   "fieldname": "normal_range_max",
+   "fieldtype": "Float",
+   "label": "Normal Range Maximum",
+   "depends_on": "eval:doc.data_type=='Numeric'",
+   "precision": 6
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Select Options",
+   "depends_on": "eval:doc.data_type=='Select'"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_alert",
+   "fieldtype": "Section Break",
+   "label": "Alert Configuration"
+  },
+  {
+   "fieldname": "enable_alerts",
+   "fieldtype": "Check",
+   "default": 1,
+   "label": "Enable Alerts"
+  },
+  {
+   "fieldname": "critical_low_threshold",
+   "fieldtype": "Float",
+   "label": "Critical Low Threshold",
+   "precision": 6,
+   "depends_on": "eval:doc.data_type=='Numeric' && doc.enable_alerts"
+  },
+  {
+   "fieldname": "critical_high_threshold",
+   "fieldtype": "Float",
+   "label": "Critical High Threshold",
+   "precision": 6,
+   "depends_on": "eval:doc.data_type=='Numeric' && doc.enable_alerts"
+  },
+  {
+   "fieldname": "column_break_alert",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alert_message_template",
+   "fieldtype": "Text",
+   "label": "Alert Message Template",
+   "description": "Use {cow_name}, {value}, {reading_type} as placeholders",
+   "depends_on": "eval:doc.enable_alerts"
+  },
+  {
+   "fieldname": "section_break_automation",
+   "fieldtype": "Section Break",
+   "label": "Automation Rules"
+  },
+  {
+   "fieldname": "automation_rules",
+   "fieldtype": "Table",
+   "label": "Automation Rules",
+   "options": "Reading Automation Rule"
+  },
+  {
+   "fieldname": "section_break_stages",
+   "fieldtype": "Section Break",
+   "label": "Stage-Specific Validation",
+   "depends_on": "eval:doc.data_type=='Numeric'"
+  },
+  {
+   "fieldname": "use_stage_specific_ranges",
+   "fieldtype": "Check",
+   "label": "Use Stage-Specific Ranges",
+   "default": 0,
+   "description": "Enable different validation ranges for different lifecycle stages",
+   "depends_on": "eval:doc.data_type=='Numeric'"
+  },
+  {
+   "fieldname": "stage_ranges",
+   "fieldtype": "Table",
+   "label": "Stage Ranges",
+   "options": "Reading Stage Range",
+   "depends_on": "eval:doc.data_type=='Numeric' && doc.use_stage_specific_ranges"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "has_web_view": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-07-24 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MooFlow",
+ "name": "Reading Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
