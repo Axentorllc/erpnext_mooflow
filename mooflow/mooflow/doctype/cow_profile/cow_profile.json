@@ -10,9 +10,8 @@
  "field_order": [
   "naming_series",
   "cow_id",
-  "cow_name",
   "column_break_1",
-  "rfid_tag",
+  "pedometer_id",
   "ear_tag",
   "status",
   "section_break_2",
@@ -26,18 +25,11 @@
   "mother",
   "father",
   "section_break_4",
-  "registration_number",
-  "color_markings",
-  "section_break_5",
   "current_weight",
   "age_months",
   "days_in_milk",
   "total_milk_produced",
-  "section_break_6",
-  "readings",
-  "section_break_7",
-  "actions",
-  "section_break_8",
+  "section_break_5",
   "notes"
  ],
  "fields": [
@@ -56,20 +48,13 @@
    "unique": 1
   },
   {
-   "fieldname": "cow_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Cow Name"
-  },
-  {
    "fieldname": "column_break_1",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "rfid_tag",
-   "fieldtype": "Data",
-   "label": "RFID Tag",
-   "unique": 1
+    "fieldname": "pedometer_id",
+    "fieldtype": "Data",
+    "label": "Pedometer ID"
   },
   {
    "fieldname": "ear_tag",
@@ -153,21 +138,6 @@
    "label": "Additional Details"
   },
   {
-   "fieldname": "registration_number",
-   "fieldtype": "Data",
-   "label": "Registration Number"
-  },
-  {
-   "fieldname": "color_markings",
-   "fieldtype": "Small Text",
-   "label": "Color & Markings"
-  },
-  {
-   "fieldname": "section_break_5",
-   "fieldtype": "Section Break",
-   "label": "Calculated Fields"
-  },
-  {
    "fieldname": "current_weight",
    "fieldtype": "Float",
    "label": "Current Weight (kg)",
@@ -194,26 +164,9 @@
    "read_only": 1
   },
   {
-   "fieldname": "section_break_6",
+   "fieldname": "section_break_5",
    "fieldtype": "Section Break",
    "label": "Readings"
-  },
-  {
-   "fieldname": "readings",
-   "fieldtype": "Table",
-   "label": "Readings",
-   "options": "Cow Reading"
-  },
-  {
-   "fieldname": "section_break_7",
-   "fieldtype": "Section Break",
-   "label": "Actions"
-  },
-  {
-   "fieldname": "actions",
-   "fieldtype": "Table",
-   "label": "Actions",
-   "options": "Cow Action Item"
   },
   {
    "fieldname": "section_break_8",
