@@ -16,9 +16,7 @@
   "average_weight_male",
   "milk_production_potential",
   "section_break_2",
-  "description",
-  "section_break_3",
-  "is_active"
+  "description"
  ],
  "fields": [
   {
@@ -73,17 +71,6 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
-  },
-  {
-   "fieldname": "section_break_3",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "default": 1,
-   "label": "Is Active"
   }
  ],
  "has_web_view": 0,
