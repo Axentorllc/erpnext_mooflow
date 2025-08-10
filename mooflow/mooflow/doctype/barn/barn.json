@@ -13,10 +13,7 @@
   "column_break_1",
   "capacity",
   "current_occupancy",
-  "section_break_2",
   "is_active",
-  "climate_controlled",
-  "automated_feeding",
   "section_break_3",
   "notes"
  ],
@@ -55,28 +52,13 @@
    "read_only": 1
   },
   {
-   "fieldname": "section_break_2",
-   "fieldtype": "Section Break",
-   "label": "Features"
-  },
-  {
    "fieldname": "is_active",
    "fieldtype": "Check",
    "default": 1,
    "label": "Is Active"
   },
   {
-   "fieldname": "climate_controlled",
-   "fieldtype": "Check",
-   "label": "Climate Controlled"
-  },
-  {
-   "fieldname": "automated_feeding",
-   "fieldtype": "Check",
-   "label": "Automated Feeding"
-  },
-  {
-   "fieldname": "section_break_3",
+   "fieldname": "section_break_2",
    "fieldtype": "Section Break",
    "label": "Notes"
   },
