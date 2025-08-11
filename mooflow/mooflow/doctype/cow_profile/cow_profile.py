@@ -24,25 +24,20 @@ class CowProfile(Document):
 	
 	def update_calculated_fields(self):
 		self.calculate_age_months()
-		self.calculate_current_weight()
-		self.calculate_total_milk_produced()
 	
-	def calculate_age_months(self):
-		if self.birth_date:
-			birth_date = getdate(self.birth_date)
-			today_date = getdate(today())
-			delta = relativedelta(today_date, birth_date)
-			self.age_months = delta.years * 12 + delta.months
+	# def calculate_age_months(self):
+	# 	if self.birth_date:
+	# 		birth_date = getdate(self.birth_date)
+	# 		today_date = getdate(today())
+	# 		delta = relativedelta(today_date, birth_date)
+	# 		self.age_months = delta.years * 12 + delta.months
 	
-	def calculate_current_weight(self):
-		weight_readings = [r for r in self.readings if r.reading_type == "Body Weight" and r.numeric_value]
-		if weight_readings:
-			latest_reading = max(weight_readings, key=lambda x: x.reading_date)
-			self.current_weight = latest_reading.numeric_value
+	# def calculate_current_weight(self):
+	# 	weight_readings = [r for r in self.readings if r.reading_type == "Body Weight" and r.numeric_value]
+	# 	if weight_readings:
+	# 		latest_reading = max(weight_readings, key=lambda x: x.reading_date)
+	# 		self.current_weight = latest_reading.numeric_value
 	
-	def calculate_total_milk_produced(self):
-		milk_readings = [r for r in self.readings if r.reading_type == "Daily Milk Yield" and r.numeric_value]
-		self.total_milk_produced = sum(r.numeric_value for r in milk_readings)
 	
 	def validate_birth_date(self):
 		if self.birth_date and getdate(self.birth_date) > getdate(today()):

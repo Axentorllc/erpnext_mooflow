@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-07-23 12:00:00.000000",
+ "creation": "2025-07-23 12:00:00",
  "custom": 1,
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,6 +10,7 @@
  "field_order": [
   "naming_series",
   "cow_id",
+  "place_of_birth",
   "column_break_1",
   "pedometer_id",
   "ear_tag",
@@ -25,11 +26,7 @@
   "mother",
   "father",
   "section_break_4",
-  "current_weight",
   "age_months",
-  "days_in_milk",
-  "total_milk_produced",
-  "section_break_5",
   "notes"
  ],
  "fields": [
@@ -48,13 +45,19 @@
    "unique": 1
   },
   {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Select",
+   "label": "Place of Birth",
+   "options": "Farm\nImported"
+  },
+  {
    "fieldname": "column_break_1",
    "fieldtype": "Column Break"
   },
   {
-    "fieldname": "pedometer_id",
-    "fieldtype": "Data",
-    "label": "Pedometer ID"
+   "fieldname": "pedometer_id",
+   "fieldtype": "Data",
+   "label": "Pedometer ID"
   },
   {
    "fieldname": "ear_tag",
@@ -62,9 +65,9 @@
    "label": "Ear Tag"
   },
   {
+   "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
-   "default": "Active",
    "in_list_view": 1,
    "label": "Status",
    "options": "Active\nSold\nCulled\nDead"
@@ -138,40 +141,10 @@
    "label": "Additional Details"
   },
   {
-   "fieldname": "current_weight",
-   "fieldtype": "Float",
-   "label": "Current Weight (kg)",
-   "precision": 2,
-   "read_only": 1
-  },
-  {
    "fieldname": "age_months",
    "fieldtype": "Int",
    "label": "Age (Months)",
    "read_only": 1
-  },
-  {
-   "fieldname": "days_in_milk",
-   "fieldtype": "Int",
-   "label": "Days in Milk",
-   "read_only": 1
-  },
-  {
-   "fieldname": "total_milk_produced",
-   "fieldtype": "Float",
-   "label": "Total Milk Produced (L)",
-   "precision": 2,
-   "read_only": 1
-  },
-  {
-   "fieldname": "section_break_5",
-   "fieldtype": "Section Break",
-   "label": "Readings"
-  },
-  {
-   "fieldname": "section_break_8",
-   "fieldtype": "Section Break",
-   "label": "Notes"
   },
   {
    "fieldname": "notes",
@@ -179,12 +152,10 @@
    "label": "Notes"
   }
  ],
- "has_web_view": 0,
- "is_submittable": 0,
  "links": [],
- "modified": "2025-07-23 12:00:00.000000",
+ "modified": "2025-08-11 12:20:32.492861",
  "modified_by": "Administrator",
- "module": "MooFlow",
+ "module": "Mooflow",
  "name": "Cow Profile",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
@@ -202,10 +173,9 @@
    "write": 1
   }
  ],
- "quick_entry": 0,
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "cow_name",
  "track_changes": 1
 }
