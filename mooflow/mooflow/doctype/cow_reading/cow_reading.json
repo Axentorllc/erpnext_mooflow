@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "creation": "2025-07-30 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reading_date",
+  "reading_type",
+  "column_break_1",
+  "method",
+  "recorded_by",
+  "section_break_values",
+  "numeric_value",
+  "text_value",
+  "boolean_value",
+  "select_value",
+  "column_break_2",
+  "unit",
+  "is_valid",
+  "section_break_quality",
+  "validation_status",
+  "column_break_alerts",
+  "alert_triggered",
+  "alert_message",
+  "section_break_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "reading_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Reading Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reading_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reading Type",
+   "options": "Reading Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Select",
+   "label": "Method",
+   "options": "Manual\nAutomatic\nSensor\nCalculated",
+   "default": "Manual"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_values",
+   "fieldtype": "Section Break",
+   "label": "Values"
+  },
+  {
+   "fieldname": "numeric_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Numeric Value",
+   "precision": 6
+  },
+  {
+   "fieldname": "text_value",
+   "fieldtype": "Data",
+   "label": "Text Value"
+  },
+  {
+   "fieldname": "boolean_value",
+   "fieldtype": "Check",
+   "label": "Boolean Value"
+  },
+  {
+   "fieldname": "select_value",
+   "fieldtype": "Data",
+   "label": "Select Value"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "is_valid",
+   "fieldtype": "Check",
+   "label": "Is Valid",
+   "default": 1
+  },
+  {
+   "fieldname": "section_break_quality",
+   "fieldtype": "Section Break",
+   "label": "Quality & Validation"
+  },
+  {
+   "fieldname": "validation_status",
+   "fieldtype": "Select",
+   "label": "Validation Status",
+   "options": "Valid\nWarning\nCritical\nInvalid",
+   "default": "Valid"
+  },
+  {
+   "fieldname": "column_break_alerts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alert_triggered",
+   "fieldtype": "Check",
+   "label": "Alert Triggered"
+  },
+  {
+   "fieldname": "alert_message",
+   "fieldtype": "Text",
+   "label": "Alert Message"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "has_web_view": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MooFlow",
+ "name": "Cow Reading",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Farm Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
