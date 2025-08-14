@@ -1,6 +1,7 @@
 {
  "actions": [],
- "creation": "2025-07-23 12:00:00.000000",
+ "autoname": "naming_series:",
+ "creation": "2025-07-23 12:00:00",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -16,10 +17,6 @@
   "section_break_followup",
   "follow_up_required",
   "follow_up_date",
-  "follow_up_actions_created",
-  "column_break_followup",
-  "success_metrics",
-  "effectiveness_score",
   "section_break_3",
   "notes"
  ],
@@ -34,10 +31,10 @@
   {
    "fieldname": "cow",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Cow",
    "options": "Cow Profile",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "action_date",
@@ -67,9 +64,9 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Completed",
    "fieldname": "status",
    "fieldtype": "Select",
-   "default": "Completed",
    "label": "Status",
    "options": "Scheduled\nIn Progress\nCompleted\nCancelled"
   },
@@ -85,40 +82,16 @@
    "label": "Follow-up Management"
   },
   {
+   "default": "0",
    "fieldname": "follow_up_required",
    "fieldtype": "Check",
    "label": "Follow-up Required"
   },
   {
+   "depends_on": "follow_up_required",
    "fieldname": "follow_up_date",
    "fieldtype": "Date",
-   "label": "Follow-up Date",
-   "depends_on": "follow_up_required"
-  },
-  {
-   "fieldname": "follow_up_actions_created",
-   "fieldtype": "Check",
-   "label": "Follow-ups Created",
-   "read_only": 1,
-   "description": "Follow-up actions were scheduled"
-  },
-  {
-   "fieldname": "column_break_followup",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "success_metrics",
-   "fieldtype": "JSON",
-   "label": "Success Metrics",
-   "description": "Success measurement data"
-  },
-  {
-   "fieldname": "effectiveness_score",
-   "fieldtype": "Float",
-   "label": "Effectiveness Score",
-   "read_only": 1,
-   "precision": 1,
-   "description": "Action effectiveness (1-10)"
+   "label": "Follow-up Date"
   },
   {
    "fieldname": "section_break_3",
@@ -131,14 +104,12 @@
    "label": "Notes"
   }
  ],
- "has_web_view": 0,
  "links": [],
- "modified": "2025-07-24 12:00:00.000000",
+ "modified": "2025-08-11 12:21:54.888119",
  "modified_by": "Administrator",
- "module": "MooFlow",
+ "module": "Mooflow",
  "name": "Cow Action Item",
- "autoname": "naming_series:",
- "naming_rule": "By Naming Series",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -167,6 +138,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:action_name",
- "creation": "2025-07-23 12:00:00.000000",
+ "creation": "2025-07-23 12:00:00",
  "custom": 1,
  "doctype": "DocType",
  "editable_grid": 1,
@@ -12,30 +12,11 @@
   "category",
   "column_break_1",
   "estimated_duration",
-  "estimated_cost",
-  "section_break_cost",
-  "default_cost_center",
-  "labor_hours",
-  "column_break_cost",
-  "labor_rate_per_hour",
-  "section_break_resources",
-  "resource_consumption",
-  "section_break_automation",
-  "auto_suggest_enabled",
-  "column_break_automation",
-  "minimum_age_days",
-  "maximum_age_days",
   "section_break_restrictions",
   "required_lifecycle_stages",
   "health_status_restrictions",
-  "section_break_suggestion",
-  "suggestion_rules",
-  "section_break_followup",
-  "follow_up_actions",
   "section_break_2",
-  "description",
-  "section_break_3",
-  "is_active"
+  "description"
  ],
  "fields": [
   {
@@ -64,115 +45,21 @@
    "label": "Estimated Duration (minutes)"
   },
   {
-   "fieldname": "estimated_cost",
-   "fieldtype": "Currency",
-   "label": "Estimated Cost"
-  },
-  {
-   "fieldname": "section_break_cost",
-   "fieldtype": "Section Break",
-   "label": "Cost Configuration"
-  },
-  {
-   "fieldname": "default_cost_center",
-   "fieldtype": "Link",
-   "label": "Default Cost Center",
-   "options": "Cost Center",
-   "description": "Default cost allocation for this action type"
-  },
-  {
-   "fieldname": "labor_hours",
-   "fieldtype": "Float",
-   "label": "Expected Labor Hours",
-   "description": "Expected labor time for this action"
-  },
-  {
-   "fieldname": "column_break_cost",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "labor_rate_per_hour",
-   "fieldtype": "Currency",
-   "label": "Labor Rate per Hour",
-   "description": "Labor cost rate per hour"
-  },
-  {
-   "fieldname": "section_break_resources",
-   "fieldtype": "Section Break",
-   "label": "Resource Consumption"
-  },
-  {
-   "fieldname": "resource_consumption",
-   "fieldtype": "Table",
-   "label": "Standard Resources Used",
-   "options": "Action Resource Template"
-  },
-  {
-   "fieldname": "section_break_automation",
-   "fieldtype": "Section Break",
-   "label": "Automation Configuration"
-  },
-  {
-   "fieldname": "auto_suggest_enabled",
-   "fieldtype": "Check",
-   "default": 1,
-   "label": "Enable Auto-suggestions",
-   "description": "Enable automatic suggestions for this action type"
-  },
-  {
-   "fieldname": "column_break_automation",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "minimum_age_days",
-   "fieldtype": "Int",
-   "label": "Minimum Age (Days)",
-   "description": "Minimum cow age for this action"
-  },
-  {
-   "fieldname": "maximum_age_days",
-   "fieldtype": "Int",
-   "label": "Maximum Age (Days)",
-   "description": "Maximum cow age for this action"
-  },
-  {
    "fieldname": "section_break_restrictions",
    "fieldtype": "Section Break",
    "label": "Business Rules"
   },
   {
+   "description": "Applicable stages (comma-separated)",
    "fieldname": "required_lifecycle_stages",
    "fieldtype": "Small Text",
-   "label": "Required Lifecycle Stages",
-   "description": "Applicable stages (comma-separated)"
+   "label": "Required Lifecycle Stages"
   },
   {
+   "description": "Required health status conditions",
    "fieldname": "health_status_restrictions",
    "fieldtype": "Small Text",
-   "label": "Health Status Requirements",
-   "description": "Required health status conditions"
-  },
-  {
-   "fieldname": "section_break_suggestion",
-   "fieldtype": "Section Break",
-   "label": "Suggestion Rules"
-  },
-  {
-   "fieldname": "suggestion_rules",
-   "fieldtype": "Table",
-   "label": "Auto-suggestion Rules",
-   "options": "Action Suggestion Rule"
-  },
-  {
-   "fieldname": "section_break_followup",
-   "fieldtype": "Section Break",
-   "label": "Follow-up Actions"
-  },
-  {
-   "fieldname": "follow_up_actions",
-   "fieldtype": "Table",
-   "label": "Automatic Follow-ups",
-   "options": "Action Follow Up Template"
+   "label": "Health Status Requirements"
   },
   {
    "fieldname": "section_break_2",
@@ -183,26 +70,12 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
-  },
-  {
-   "fieldname": "section_break_3",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "default": 1,
-   "label": "Is Active"
   }
  ],
- "has_web_view": 0,
- "in_create": 1,
- "is_submittable": 0,
  "links": [],
- "modified": "2025-07-24 12:00:00.000000",
+ "modified": "2025-08-10 15:51:51.063385",
  "modified_by": "Administrator",
- "module": "MooFlow",
+ "module": "Mooflow",
  "name": "Action Type",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -221,6 +94,7 @@
   }
  ],
  "quick_entry": 1,
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
