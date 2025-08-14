@@ -3,7 +3,6 @@
  "allow_rename": 1,
  "autoname": "field:barn_name",
  "creation": "2025-07-23 12:00:00",
- "custom": 1,
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
