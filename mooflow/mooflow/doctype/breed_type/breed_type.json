@@ -28,8 +28,9 @@
   },
   {
    "fieldname": "origin_country",
-   "fieldtype": "Data",
-   "label": "Origin Country"
+   "fieldtype": "Link",
+   "label": "Origin Country",
+    "options": "Country"
   },
   {
    "fieldname": "column_break_1",
